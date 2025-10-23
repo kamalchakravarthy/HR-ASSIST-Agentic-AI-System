@@ -1,0 +1,10 @@
+[project]
+name = "hr-assist-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "emails>=0.6",
+    "mcp[cli]>=1.18.0",
+]
