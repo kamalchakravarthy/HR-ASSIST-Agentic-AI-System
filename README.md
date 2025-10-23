@@ -1,23 +1,21 @@
 ## **HR-ASSIST Agentic AI System**
 ---
-HR ASSIST is an Agentic AI system designed to help HR teams automate routine workflows. This example demonstrates automation of the employee onboarding process, streamlining tasks that typically require manual intervention.
+HR ASSIST is an Agentic AI system designed to help HR teams automate routine workflows.This project is a powerful HR automation assistant built with Python and `FastMCP`. This example demonstrates automation of the employee onboarding process, streamlining tasks that typically require manual intervention.
 
-In terms of technical architecture, for MCP client I used Claude Desktop and the code base here represents the MCP server with necessary tools that will be used by MCP client 
+-It uses a large language model client (Claude) to understand natural language prompts and execute complex, multi-step HR workflows, such as onboarding new employees, managing tickets, and handling leave requests.
+
+-The backend server (`server.py`) exposes a set of tools (e.g., `add_employee`, `send_email`, `create_ticket`) that the LLM can call. The `utils.py` script seeds the in-memory database with realistic dummy data for demonstration.
+
+-In terms of technical architecture, for MCP client I used Claude Desktop and the code base here represents the MCP server with necessary tools that will be used by MCP client 
 
 **Usage**
-- Click on the `+` icon and select the `Add from hr-assist` option, and send the request.
-- Fill the details for the new employee:
+- After all the configuration open claude desktop and click on the `+` icon and select the `Add from hr-assist` option, select `onboard new employee`,and send the request.
+- Fill the details for the new employee and his manager:
+-The prompt template looks like this, which includes all the steps for onboarding a new employee.
 
-<img src="resources\image.jpg" alt="Claude desktop prompt with fields" style="width:auto;height:300px;padding-left:30px">
+<img src="Resources\Screenshot 2025-10-23 223731.png" alt="Claude desktop prompt with fields" style="width:auto;height:300px;padding-left:30px">
 
 Alternatively, you can draft a custom prompt and let the agent take over.
-
-
-# HR Workflow Automation Assistant (using FastMCP & Claude)
-
-This project is a powerful HR automation assistant built with Python and `FastMCP`. It uses a large language model client (Claude) to understand natural language prompts and execute complex, multi-step HR workflows, such as onboarding new employees, managing tickets, and handling leave requests.
-
-The backend server (`server.py`) exposes a set of tools (e.g., `add_employee`, `send_email`, `create_ticket`) that the LLM can call. The `utils.py` script seeds the in-memory database with realistic dummy data for demonstration.
 
 ## ✨ Core Features
 
