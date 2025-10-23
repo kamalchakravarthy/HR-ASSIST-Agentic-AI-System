@@ -68,41 +68,41 @@ Here is a step-by-step walkthrough of the agent in action:
 ### 1. The Prompt
 It all starts with a simple input form in the Claude client, providing the new employee's name and their manager's name.
 
-![User provides initial prompt inputs for onboarding](Screenshot%202025-10-22%20230639.png)
+![User provides initial prompt inputs for onboarding](Resources/Screenshot%202025-10-22%20230639.png)
 
 ### 2. The Agent Takes Over
 The agent receives the prompt, breaks it down into a plan, and begins executing the steps. It first gets the manager's details and then moves to Step 1: adding the employee to the HRMS.
 
-![Claude outlines the plan, starting with Step 1: Add employee](Screenshot%202025-10-22%20230658.png)
+![Claude outlines the plan, starting with Step 1: Add employee](Resources/Screenshot%202025-10-22%20230658.png)
 
 A closer look at the tool call shows the agent using the manager's ID (`E003`) it found to correctly add the new employee, Kamal.
 
-![Tool call details for Step 1: Add employee](Screenshot%202025-10-22%20231049.png)
+![Tool call details for Step 1: Add employee](Resources/Screenshot%202025-10-22%20231049.png)
 
 ### 3. Step 2 & 3: Sending Notifications
 The agent immediately proceeds to Steps 2 and 3: sending the welcome email and notifying the manager.
 
 **Result (Step 2):** The new employee, Kamal, receives a welcome email with his new Employee ID and corporate email address.
 
-![Welcome email sent to the new employee](Screenshot%202025-10-22%20230920.png)
+![Welcome email sent to the new employee](Resources/Screenshot%202025-10-22%20230920.png)
 
 **Result (Step 3):** Simultaneously, the manager, Ankit Sharma, receives a detailed email informing him of his new team member.
 
-![Notification email sent to the manager](Screenshot%202025-10-22%20230939.png)
+![Notification email sent to the manager](Resources/Screenshot%202025-10-22%20230939.png)
 
 ### 4. Step 4: Raising Equipment Tickets
 The agent's plan continues. After sending the emails, it gets the new employee's ID (`E011`) from the output of Step 1 and uses it to raise equipment tickets.
 
-![Claude proceeds to Step 4: Raise tickets](Screenshot%202025-10-22%20230713.png)
+![Claude proceeds to Step 4: Raise tickets](Resources/Screenshot%202025-10-22%20230713.png)
 
 Here is a close-up of the agent calling the `create_ticket` tool for a "Bag", automatically filling in the `emp_id` and a standard reason. It does this for all required items (Laptop, ID Card, etc.).
 
-![Tool call details for Step 4: Create ticket for a bag](Screenshot%202025-10-22%20231123.png)
+![Tool call details for Step 4: Create ticket for a bag](Resources/Screenshot%202025-10-22%20231123.png)
 
 ### 5. Onboarding Complete!
 After all 5 steps are successfully executed, the agent presents a final, clean summary to the user. The entire process—from system entry and emails to IT tickets and meeting schedules—is complete.
 
-![Final "Onboarding Complete!" summary from Claude](Screenshot%202025-10-22%20230733.png)
+![Final "Onboarding Complete!" summary from Claude](Resources/Screenshot%202025-10-22%20230733.png)
 
 ## 🛠️ Tech Stack
 
